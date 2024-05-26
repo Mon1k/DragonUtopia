@@ -765,6 +765,15 @@
     <ClInclude Include="..\..\engine\Engine\textures\Texture3DShaderClass.h">
       <Filter>src\engine\textures</Filter>
     </ClInclude>
+    <ClInclude Include="src\ui\MainMenu.h">
+      <Filter>src\game\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\OptionsMenu.h">
+      <Filter>src\game\ui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\engine\Engine\data\shaders\alphamap.ps">

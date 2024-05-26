@@ -381,6 +381,9 @@
     <ClInclude Include="..\..\engine\Engine\ui\Table.h" />
     <ClInclude Include="..\..\engine\Engine\ui\Tree.h" />
     <ClInclude Include="..\..\engine\Engine\ui\UIManager.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="src\ui\MainMenu.h" />
+    <ClInclude Include="src\ui\OptionsMenu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\engine\Engine\data\shaders\alphamap.ps" />
