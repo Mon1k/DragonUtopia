@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65B970BA-EAB3-4666-A7BF-968164F72FA2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\download\etc\study\assimp-5.1.0\out\build\x64-Debug\include;C:\download\etc\study\assimp-5.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\download\etc\study\assimp-5.1.0\out\build\x64-Debug\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\</OutDir>
+    <TargetName>game</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.1\lib\vs2017\x64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\engine\Engine\alphamapshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\bitmapclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\cameraclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\clipplaneshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\colorshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\d3dclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\fogshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\fontclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\fontshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\fpsclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\frustumclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\graphicsclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\inputclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\lightclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\lightshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\modelclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\modellistclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\2d\DebugWindow.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\actor\Actor.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\bbox.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Billboard.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Blur.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Fire.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\foliageclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Glass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\gridclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\loader\AssimpLoader.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\loader\DsLoader.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\loader\ObjLoader.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Model.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\modelbumpclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\modelcolor.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\ModelManager.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\particles\Fountain.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\particles\ParticleManager.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\particles\Waterfall.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\Reflection.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\sky\skydomeclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\sky\skyplaneclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\terrain\quadtreeclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\terrain\terrainclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\models\WaterNode.cpp" />
+    <ClCompile Include="..\..\engine\Engine\positionclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\render\2d\debugwindowclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\render\passes\VolumetricClouds.cpp" />
+    <ClCompile Include="..\..\engine\Engine\render\renderstenciltextureclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\render\rendertextureclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\render\viewpointclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\resources\ResourceManager.cpp" />
+    <ClCompile Include="..\..\engine\Engine\sound\soundclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\systemclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textureclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textureshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\blurshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\bumpmapshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\depthshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\fadeshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\fireshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\foliageshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\glassshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\lightmapshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\multitextureshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\particleshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\projectionshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\reflectionshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\refractionshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\shadowshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\skydomeshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\skyplaneshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\softshadowshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\specmapshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\terrainshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\Texture3DShaderClass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\texturearrayclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\translateshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\transparentshaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\textures\watershaderclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\timerclass.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\button.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\checkbox.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\cursor.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\Alert.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\Confirm.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\FileChooser.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\OpenDialog.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\SaveDialog.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\dialogs\window.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\FileInput.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\image.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\input.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\label.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\ListNode.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\Scrollbar.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\Table.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\Tree.cpp" />
+    <ClCompile Include="..\..\engine\Engine\ui\UIManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\engine\Engine\AbstractNode.h" />
+    <ClInclude Include="..\..\engine\Engine\alphamapshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\bitmapclass.h" />
+    <ClInclude Include="..\..\engine\Engine\cameraclass.h" />
+    <ClInclude Include="..\..\engine\Engine\clipplaneshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\colorshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\d3dclass.h" />
+    <ClInclude Include="..\..\engine\Engine\fogshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\fontclass.h" />
+    <ClInclude Include="..\..\engine\Engine\fontshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\fpsclass.h" />
+    <ClInclude Include="..\..\engine\Engine\frustumclass.h" />
+    <ClInclude Include="..\..\engine\Engine\graphicsclass.h" />
+    <ClInclude Include="..\..\engine\Engine\inputclass.h" />
+    <ClInclude Include="..\..\engine\Engine\lightclass.h" />
+    <ClInclude Include="..\..\engine\Engine\lightshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\map\MapEntity.h" />
+    <ClInclude Include="..\..\engine\Engine\map\XmlLoad.h" />
+    <ClInclude Include="..\..\engine\Engine\map\XmlSave.h" />
+    <ClInclude Include="..\..\engine\Engine\math\Point.h" />
+    <ClInclude Include="..\..\engine\Engine\math\Rectangle.h" />
+    <ClInclude Include="..\..\engine\Engine\modelclass.h" />
+    <ClInclude Include="..\..\engine\Engine\modellistclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\2d\DebugWindow.h" />
+    <ClInclude Include="..\..\engine\Engine\models\AbstractModel.h" />
+    <ClInclude Include="..\..\engine\Engine\models\AbstractTarget.h" />
+    <ClInclude Include="..\..\engine\Engine\models\actor\Actor.h" />
+    <ClInclude Include="..\..\engine\Engine\models\bbox.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Billboard.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Blur.h" />
+    <ClInclude Include="..\..\engine\Engine\models\CompositeModel.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Fire.h" />
+    <ClInclude Include="..\..\engine\Engine\models\foliageclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Glass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\gridclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\loader\AbstractLoader.h" />
+    <ClInclude Include="..\..\engine\Engine\models\loader\AssimpLoader.h" />
+    <ClInclude Include="..\..\engine\Engine\models\loader\DsLoader.h" />
+    <ClInclude Include="..\..\engine\Engine\models\loader\ObjLoader.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Model.h" />
+    <ClInclude Include="..\..\engine\Engine\models\modelbumpclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\modelcolor.h" />
+    <ClInclude Include="..\..\engine\Engine\models\ModelManager.h" />
+    <ClInclude Include="..\..\engine\Engine\models\particles\AbstractParticle.h" />
+    <ClInclude Include="..\..\engine\Engine\models\particles\Fountain.h" />
+    <ClInclude Include="..\..\engine\Engine\models\particles\ParticleManager.h" />
+    <ClInclude Include="..\..\engine\Engine\models\particles\Waterfall.h" />
+    <ClInclude Include="..\..\engine\Engine\models\Reflection.h" />
+    <ClInclude Include="..\..\engine\Engine\models\sky\skydomeclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\sky\skyplaneclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\sky\WeatherManager.h" />
+    <ClInclude Include="..\..\engine\Engine\models\terrain\quadtreeclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\terrain\terrainclass.h" />
+    <ClInclude Include="..\..\engine\Engine\models\WaterNode.h" />
+    <ClInclude Include="..\..\engine\Engine\Options.h" />
+    <ClInclude Include="..\..\engine\Engine\positionclass.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\AbstractEntity.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\AbstractReader.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\AbstractWriter.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\xml\Attribute.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\xml\Node.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\xml\XmlReader.h" />
+    <ClInclude Include="..\..\engine\Engine\reader\xml\XmlWriter.h" />
+    <ClInclude Include="..\..\engine\Engine\render\2d\debugwindowclass.h" />
+    <ClInclude Include="..\..\engine\Engine\render\passes\VolumetricClouds.h" />
+    <ClInclude Include="..\..\engine\Engine\render\renderstenciltextureclass.h" />
+    <ClInclude Include="..\..\engine\Engine\render\rendertextureclass.h" />
+    <ClInclude Include="..\..\engine\Engine\render\viewpointclass.h" />
+    <ClInclude Include="..\..\engine\Engine\resource.h" />
+    <ClInclude Include="..\..\engine\Engine\resources\AbstractResource.h" />
+    <ClInclude Include="..\..\engine\Engine\resources\ResourceManager.h" />
+    <ClInclude Include="..\..\engine\Engine\shaders\AbstractShader.h" />
+    <ClInclude Include="..\..\engine\Engine\sound\soundclass.h" />
+    <ClInclude Include="..\..\engine\Engine\systemclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textureclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textureshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\blurshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\bumpmapshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\depthshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\fadeshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\fireshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\foliageshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\glassshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\lightmapshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\multitextureshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\particleshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\projectionshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\reflectionshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\refractionshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\shadowshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\skydomeshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\skyplaneshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\softshadowshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\specmapshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\terrainshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\Texture3DShaderClass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\texturearrayclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\translateshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\transparentshaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\textures\watershaderclass.h" />
+    <ClInclude Include="..\..\engine\Engine\timerclass.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\Array.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\Date.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\File.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\random.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\Ref.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\String.h" />
+    <ClInclude Include="..\..\engine\Engine\tool\Types.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\AbstractGUI.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\button.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\checkbox.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\cursor.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\Alert.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\Confirm.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\FileChooser.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\OpenDialog.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\SaveDialog.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\dialogs\window.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\FileInput.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\group.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\image.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\input.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\label.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\ListNode.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\Scrollbar.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\Table.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\Tree.h" />
+    <ClInclude Include="..\..\engine\Engine\ui\UIManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\engine\Engine\data\shaders\alphamap.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\alphamap.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\bumpmap.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\bumpmap.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\clipplane.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\clipplane.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\color.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\color.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\fade.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\fade.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\fog.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\fog.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\font.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\font.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\light.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\light.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\lightmap.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\lightmap.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\multitexture.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\multitexture.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\reflection.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\reflection.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\refraction.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\refraction.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\specmap.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\specmap.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\texture.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\texture.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\translate.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\translate.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\transparent.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\transparent.vs" />
+    <None Include="..\..\engine\Engine\data\shaders\water.ps" />
+    <None Include="..\..\engine\Engine\data\shaders\water.vs" />
+    <None Include="data\shaders\fire.ps" />
+    <None Include="data\shaders\fire.vs" />
+    <None Include="data\shaders\glass.ps" />
+    <None Include="data\shaders\glass.vs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
